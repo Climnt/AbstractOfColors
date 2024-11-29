@@ -1,0 +1,296 @@
+body {
+    background-image: url(Abstract-minimalist-wallpaper-HD.png);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+.All {
+    padding-top: 200px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Top-Name */
+.All h3 {
+    font-family: 'abstrak', sans-serif;
+    color: khaki;
+    font-size: 50px;
+    padding-bottom: 30px;
+    text-shadow: 1px 1px 30px black;     
+    text-align: center;
+    white-space: nowrap;
+}
+.All h4 {
+    font-family: 'abstrak', sans-serif;
+    text-shadow: 2px 2px 10px black;  
+    color: khaki;
+    margin-top: 30px;
+    white-space: nowrap;
+}
+
+/* Box 1-6 */
+.box1 {
+    transition: ease-in-out 0.3s;
+    background-repeat: no-repeat;
+    background-image: url(pexels-photo-11025133.jpeg);
+}
+.box2 {
+    transition: ease-in-out 0.3s;
+    background-repeat: no-repeat;
+    background-image: url(pexels-photo-2911519.jpeg);
+
+}
+.box3 {
+    transition: ease-in-out 0.3s;
+    background-repeat: no-repeat;
+    background-image: url(pexels-photo-3794359.jpeg);
+
+}
+.box4 {
+    transition: ease-in-out 0.3s;
+    background-repeat: no-repeat;
+    background-image: url(pexels-photo-3844796.jpeg);
+
+}
+.box5 {
+    transition: ease-in-out 0.3s;
+    background-repeat: no-repeat;
+    background-image: url(pic1.jpeg);
+
+}
+.box6 {
+    transition: ease-in-out 0.3s;
+    background-repeat: no-repeat;
+    background-image: url(pexels-photo-7004697.jpeg);
+
+}
+
+/* Box Size */
+.box1, .box2, .box3, .box4, .box5, .box6 {
+    transition: ease-in-out 0.3s;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px black;
+    width: 180px;
+    height: 330px;
+}
+
+/* hover */
+.b1:hover {
+    transition: ease-in-out 0.3s;
+    transform: rotate(-4deg);
+    width: 240px;
+}
+
+
+.b2:hover {
+    transition: ease-in-out 0.3s;
+    transform: rotate(4deg);
+    width: 240px;
+}
+
+/* if hover on one box the rest of the box will be blur out .... hover blur */
+.container:hover #ss:not(:hover) { 
+    filter: blur(1.5px);
+}
+
+/* Animation */
+#ss {
+    animation-name: OpacityAnm;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes OpacityAnm {
+    0% {
+       border: 2px solid green;
+       color: green;
+    }
+    20% {
+        border: 2px solid greenyellow;
+        color: greenyellow;
+    }
+    40% {
+        border: 2px solid yellow;
+        color: yellow;
+    }
+    60% {
+        border: 2px solid lightgreen;
+        color: lightgreen;
+    }
+    80% {
+        border: 2px solid greenyellow;
+        color: greenyellow;
+    }
+    100% {
+        border: 2px solid green;
+        color: green;
+    }
+}
+
+/* If hover color animation */
+#ss:hover:not(OpacityAnm) {
+    animation-name: Color1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes Color1 {
+    0% {
+        border: 2px solid orange;
+        color: orange;
+    }
+    100% {
+        border: 2px solid orange;
+        color: orange;
+    }
+}
+
+/* Color animation On H3, H4 */
+h3, h4 {
+    animation-name: Color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes Color {
+    0% {
+       color: green;
+    }
+    20% {
+        color: greenyellow;
+    }
+    40% {
+        color: yellow;
+    }
+    60% {
+        color: lightgreen;
+    }
+    80% {
+        color: greenyellow;
+    }
+    100% {
+        color: green;
+    }
+}
+
+
+/* Resposive */
+@media (max-width: 1024px) {
+    .All h3 {
+        font-size: 30px;
+    }
+    .All h4 {
+        font-size: 10px;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        width: 100px;
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .All h3 {
+        font-size: 25px;
+        white-space: nowrap;
+    }
+    .All h4 {
+        font-size: 8px;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        width: 80px;
+        height: 180px;
+    }
+    .container {
+        flex-wrap: no-wrap;
+        white-space: nowrap;
+    }
+    .All {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 569px) {
+    .All h3 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+    .All h4 {
+        display: none;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        width: 60px;
+        height: 150px;
+        flex: 1 1 100px;
+        justify-content: center;
+    }
+    .container {
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+    .All {
+        padding: 60px;
+    }
+}
+@media (max-width: 375px) {
+    .All h3 {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+    .All h4 {
+        display: none;
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .All {
+        padding: 30px;
+    }
+}
+@media (max-width: 320px) {
+    .All h3 {
+        width: 300px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+    .All h4 {
+        display: none;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        width: 60px;
+        height: 150px;
+        flex: 1 1 100px;
+        
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .All {
+        padding: 30px;
+    }
+}
